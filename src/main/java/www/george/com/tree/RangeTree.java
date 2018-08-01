@@ -5,23 +5,29 @@ import java.util.TreeSet;
 
 /**
  * @author rouqiu
- *
+ * not use black red tree and use binary tree s
  */
-public class RangeTree extends TreeSet<Range> {
-    public boolean insert(Range node) {
-        for (Range range : this) {
+public class RangeTree {
+    /**
+     *  dummy node
+     */
+    RangeTreeNode head;
+    RangeTree() {
+        head = new RangeTreeNode();
+    }
 
-        }
+    public boolean add(final Range other) {
+        RangeTreeNode a;
         return true;
     }
 
-    public RangeTree() {
-        super(Comparator.comparing(range -> range.start));
+    public boolean remove(final Range other) {
+        return true;
     }
 }
 
-class Range {
-    public int start;
-    public int end;
-    public int max;
+class RangeTreeNode {
+    RangeTreeNode left;
+    RangeTreeNode right;
+    Range range; 
 }
