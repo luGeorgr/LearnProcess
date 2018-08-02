@@ -45,4 +45,8 @@ public class Range {
         final Range other = (Range) obj;
         return mStart == other.mStart && mEnd == other.mEnd;
     }
+
+    public boolean isOverlaped(final Range other) {
+        return mStart <= other.getEnd() && other.getStart() <= mEnd;
+    }
 }
