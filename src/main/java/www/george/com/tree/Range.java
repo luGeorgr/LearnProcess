@@ -7,7 +7,6 @@ package www.george.com.tree;
 public class Range {
     private int mStart;
     private int mEnd;
-    private int mMax;
 
     public void setStart(final int start) {
         mStart = start;
@@ -21,16 +20,8 @@ public class Range {
         return mEnd;
     }
 
-    public int getMax() {
-        return mMax;
-    }
-
     public void setEnd(final int end) {
         mEnd = end;
-    }
-
-    public void setMax(final int max) {
-        mMax = max;
     }
 
     @Override
@@ -46,7 +37,7 @@ public class Range {
         return mStart == other.mStart && mEnd == other.mEnd;
     }
 
-    public boolean isOverlaped(final Range other) {
+    public boolean isOverlap(final Range other) {
         return mStart <= other.getEnd() && other.getStart() <= mEnd;
     }
 }
