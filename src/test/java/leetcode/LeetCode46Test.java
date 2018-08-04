@@ -14,17 +14,20 @@ import static org.junit.Assert.*;
  */
 public class LeetCode46Test {
 
-    private LeetCode46 mLeetCode46;
+    private LeetCode46A mLeetCode46A;
+    private LeetCode46B mLeetCode46B;
 
     @Before
     public void before() {
-        mLeetCode46 = new LeetCode46();
+        mLeetCode46A = new LeetCode46A();
+        mLeetCode46B = new LeetCode46B();
     }
 
     @Test
     public void testPermute() {
         int[] arr = {1, 2, 3};
-        List<List<Integer>> res = mLeetCode46.permute(arr);
+        List<List<Integer>> res = mLeetCode46A.permute(arr);
         Assert.assertEquals(6, res.size());
+        Assert.assertEquals(6, mLeetCode46B.permute(arr).size());
     }
 }

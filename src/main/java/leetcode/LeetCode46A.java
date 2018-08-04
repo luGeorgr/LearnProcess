@@ -9,7 +9,7 @@ import java.util.List;
  * @author rouqiu
  *
  */
-public class LeetCode46 {
+public class LeetCode46A {
     public List<List<Integer>> permute(int[] nums) {
         if (nums.length == 0) {
             return null;
