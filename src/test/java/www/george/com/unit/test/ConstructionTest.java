@@ -24,15 +24,13 @@ public class ConstructionTest {
 
     @Before
     public void before() throws Exception {
-        ConstructionDao dao = new ConstructionDao(10);
+        ConstructionDao dao = new ConstructionDao();
         PowerMockito.whenNew(ConstructionDao.class).withArguments(10).thenReturn(dao);
-        ConstructionDao n = new ConstructionDao(10);
-
     }
 
     @Test
     public void testNewInstance() {
         ConstructionDao dao = mConstruction.newInstance();
-        Assert.assertEquals(10, dao.getVal());
+        Assert.assertEquals(100, dao.getVal());
     }
 }
