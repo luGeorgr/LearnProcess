@@ -12,7 +12,9 @@ class RangeModule {
     }
 
     public void addRange(int left, int right) {
-        if (right <= left) return;
+        if (right <= left) {
+            return;
+        }
         Integer start = map.floorKey(left);
         Integer end = map.floorKey(right);
         if (start == null && end == null) {
@@ -30,12 +32,16 @@ class RangeModule {
 
     public boolean queryRange(int left, int right) {
         Integer start = map.floorKey(left);
-        if (start == null) return false;
+        if (start == null) {
+            return false;
+        }
         return map.get(start) >= right;
     }
 
     public void removeRange(int left, int right) {
-        if (right <= left) return;
+        if (right <= left) {
+            return;
+        }
         Integer start = map.floorKey(left);
         Integer end = map.floorKey(right);
         if (end != null && map.get(end) > right) {
