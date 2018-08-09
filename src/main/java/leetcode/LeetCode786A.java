@@ -34,9 +34,9 @@ public class LeetCode786A {
             this.denominator = denominator;
         }
 
-        /*
-        **  < 0 : this > other
-         */
+        /**
+         *  < 0 : this > other
+         **/
         @Override
         public int compareTo(Object o) {
             Node other = (Node) o;
