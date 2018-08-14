@@ -15,12 +15,12 @@
  */
 package www.george.com.unit.test.power.mock.domainmocking.impl;
 
-import demo.org.powermock.examples.tutorial.domainmocking.EventService;
-import demo.org.powermock.examples.tutorial.domainmocking.PersonService;
-import demo.org.powermock.examples.tutorial.domainmocking.SampleService;
-import demo.org.powermock.examples.tutorial.domainmocking.domain.BusinessMessages;
-import demo.org.powermock.examples.tutorial.domainmocking.domain.Person;
-import demo.org.powermock.examples.tutorial.domainmocking.domain.SampleServiceException;
+import www.george.com.unit.test.power.mock.domainmocking.EventService;
+import www.george.com.unit.test.power.mock.domainmocking.PersonService;
+import www.george.com.unit.test.power.mock.domainmocking.SampleService;
+import www.george.com.unit.test.power.mock.domainmocking.domain.BusinessMessages;
+import www.george.com.unit.test.power.mock.domainmocking.domain.Person;
+import www.george.com.unit.test.power.mock.domainmocking.domain.SampleServiceException;
 
 /**
  * This is a simple service that delegates calls to two stub services. The
