@@ -27,6 +27,12 @@ class ThreadJoinTest extends Thread {
         for (int i = 0; i < 1000; i++) {
             System.out.println(super.getName());
         }
+
+        try {
+            throw new Exception("Hello World");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
     }
 
 
