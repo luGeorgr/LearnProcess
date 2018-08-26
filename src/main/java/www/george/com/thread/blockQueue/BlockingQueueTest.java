@@ -35,12 +35,14 @@ public class BlockingQueueTest {
                 new Thread(()->{
                     try {
                         boolean done = false;
-                        File file = queue.take();
-                        if (file == DUMMY) {
-                            queue.put(file);
-                            done = true;
-                        } else {
-                            search(file, keyword);
+                        while (!done) {
+                            File file = queue.take();
+                            if (file == DUMMY) {
+                                queue.put(file);
+                                done = true;
+                            } else {
+                                search(file, keyword);
+                            }
                         }
                     } catch (Exception e) {
                         e.printStackTrace();
