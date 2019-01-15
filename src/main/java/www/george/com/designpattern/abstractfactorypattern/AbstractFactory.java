@@ -5,5 +5,6 @@ package www.george.com.designpattern.abstractfactorypattern;
  *
  */
 public abstract class AbstractFactory {
-
+    public abstract Mouse getMouse();
+    public abstract KeyBoard getKeyBoard();
 }
