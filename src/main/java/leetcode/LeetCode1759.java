@@ -3,18 +3,19 @@ package leetcode;
 public class LeetCode1759 {
     public int countHomogenous(String s) {
         int sum = 0;
-        int i = 0;
-        for (;i < s.length();) {
-            int j = i + 1;
+        for(int i = 0; i < s.length(); ) {
+            int j = i;
             for (; j < s.length(); j++) {
                 if (s.charAt(i) != s.charAt(j)) {
+                    i = j;
                     break;
                 }
+                sum = (sum + j - i + 1) % 1000000007;
             }
-            for (int k = 1; k <= j - i; k++) {
-                sum = (sum + k) % 1000000007;
+
+            if (j >= s.length()) {
+                i = j;
             }
-            i = j;
         }
         return sum;
     }
